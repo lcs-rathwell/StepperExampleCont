@@ -7,46 +7,44 @@
 
 import SwiftUI
  
-struct ContentView: View {
+struct AdditionView: View {
     
     // MARK: Stored properties
-    @State var base: Int = 1
+    @State var firstNumber: Int = 1
+    @State var secondNumber: Int = 1
     
     // MARK: Computed properties
-    var squared: Int {
-        return base * base
+    var total: Int {
+        return firstNumber + secondNumber
     }
     var body: some View {
         VStack {
-            
             HStack {
-                
-                Text("\(squared)")
+                Text("\(firstNumber)")
                     .font(.system(size: 96))
             }
             
-            Stepper(value: $base, label: {
+            Stepper(value: $firstNumber, label: {
                 Text("select first number")
             })
-            
-            VStack {
                 HStack {
-                    Text("\(squared)")
+                    Text("\(secondNumber)")
                         .font(.system(size: 96))
                 }
                 
-                Stepper(value: $base, label: {
+                Stepper(value: $secondNumber, label: {
                     Text("select second number")
-                    
-                    Text ("")
-                        .font(.system(size: 96))
                 })
+                    HStack {
+                        Text ("\(total)")
+                            .font(.system(size: 96))
             }
         }
     }
 }
+
  
 #Preview {
-    ContentView()
+    LandingView()
 }
  

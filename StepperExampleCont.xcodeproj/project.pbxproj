@@ -79,10 +79,10 @@
 		AC6984BC2D5CE764000D0122 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC6984C32D5CE7CE000D0122 /* TabView.swift */,
 				AC6984BD2D5CE78B000D0122 /* DivisionView.swift */,
 				AC6984BF2D5CE799000D0122 /* Subtraction View.swift */,
 				AC6984C12D5CE7A9000D0122 /* MultiplicationView.swift */,
-				AC6984C32D5CE7CE000D0122 /* TabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

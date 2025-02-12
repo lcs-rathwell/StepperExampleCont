@@ -17,6 +17,11 @@ struct DivisionView: View {
     var total: Int {
         return firstNumber / secondNumber
     }
+    
+    var remainder: Int {
+        return firstNumber % secondNumber
+    }
+    
     var body: some View {
         VStack {
             HStack {
@@ -38,6 +43,8 @@ struct DivisionView: View {
                     HStack {
                         Text ("\(total)")
                             .font(.system(size: 96))
+                        Text ("\(remainder)")
+                            .font(.system(size: 46))
             }
         }
     }

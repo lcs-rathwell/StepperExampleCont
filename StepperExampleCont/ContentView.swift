@@ -6,19 +6,47 @@
 //
 
 import SwiftUI
-
+ 
 struct ContentView: View {
+    
+    // MARK: Stored properties
+    @State var base: Int = 1
+    
+    // MARK: Computed properties
+    var squared: Int {
+        return base * base
+    }
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            HStack {
+                
+                Text("\(squared)")
+                    .font(.system(size: 96))
+            }
+            
+            Stepper(value: $base, label: {
+                Text("select first number")
+            })
+            
+            VStack {
+                HStack {
+                    Text("\(squared)")
+                        .font(.system(size: 96))
+                }
+                
+                Stepper(value: $base, label: {
+                    Text("select second number")
+                    
+                    Text ("")
+                        .font(.system(size: 96))
+                })
+            }
         }
-        .padding()
     }
 }
-
+ 
 #Preview {
     ContentView()
 }
+ 
